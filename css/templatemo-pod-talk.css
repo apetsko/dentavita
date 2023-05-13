@@ -978,25 +978,7 @@ main {
 }
 
 
-/*---------------------------------------
-  SEARCH FORM               
------------------------------------------*/
-.search-form .form-control {
-  border: 0;
-  margin-bottom: 0;
-}
 
-.search-form button[type="submit"] {
-  background: var(--secondary-color);
-  border-color: var(--secondary-color);
-  max-width: 50px;
-  height: 100%;
-  padding-left: 15px;
-}
-
-.search-form button[type="submit"]:hover {
-  background: var(--primary-color);
-}
 
 
 /*---------------------------------------
@@ -1238,10 +1220,4 @@ main {
   }
 }
 
-@media screen and (max-width: 414px) {
-  .search-form {
-    max-width: 200px;
-  }
-
-}
 
