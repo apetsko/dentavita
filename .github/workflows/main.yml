@@ -41,7 +41,7 @@ jobs:
 
       - name: Build
         run: |
-          npm run build -- --prod
+          npm run build
 
       - name: Lint
         run: |
