@@ -1,0 +1,88 @@
+/*---------------------------------------
+  RESPONSIVE STYLES               
+-----------------------------------------*/
+// @media screen and (min-width: 2160px) {
+//     .hero-section {
+//         background-size: 100% 90%;
+//     }
+// }
+
+
+// @media screen and (min-width: 1600px) {
+//     .site-footer {
+//         padding-top: 250px;
+//     }
+// }
+
+// @media screen and (max-width: 1240px) {
+//     .hero-section {
+//         background-size: 116%;
+
+//     }
+// }
+
+// @media screen and (max-width: 991px) {
+
+//     .hero-section {
+//         background-size: 160% 66%;
+//     }
+
+//     .section-padding {
+//         padding-top: 50px;
+//         padding-bottom: 50px;
+//     }
+
+
+
+
+
+// }
+
+// @media screen and (max-width: 540px) {
+//     .hero-section {
+//         background-size: 180% 65%;
+//         /* T o o p l a t e . c o m   C u s t o m i z e d */
+//     }
+
+//     .custom-block .custom-block-top {
+//         flex-direction: column;
+//     }
+
+//     .custom-block .custom-block-top small:last-child {
+//         margin-top: 10px;
+//         margin-bottom: 10px;
+//     }
+// }
+
+
+
+
+/*---------------------------------------
+  SITE HEADER              
+-----------------------------------------*/
+.hero-section {
+    background-image: url('../../assets/header.jpg'), linear-gradient(#348CD2, #FFFFFF);
+    background-repeat: no-repeat;
+    background-size: 108% 76%;
+    background-position: top;
+    padding-top: 350px;
+
+}
+
+// .site-header h2 {
+//     color: var(--white-color);
+// }
+
+.element-underneath {
+    /* Дополнительные стили */
+    z-index: 1;
+    /* Задайте значение z-index, меньшее, чем у элемента, который должен быть поверх */
+}
+
+.element-on-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    /* Задайте значение z-index, которое позволит элементу быть поверх другого */
+}

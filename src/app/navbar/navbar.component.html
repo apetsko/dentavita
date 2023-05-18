@@ -1,35 +1,18 @@
-<nav class="navbar navbar-expand-md" aria-label="Third navbar example">
-  <div class="container-fluid">
-    <img
-      src="assets/dentavita-logo.png"
-      alt="DentaVita"
-      class="logo-image img-fluid"
-      style="max-width: 15rem"
-    />
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarsExample03"
-      aria-controls="navbarsExample03"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="px-3 py-3 text-white">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <img src="assets/dentavita-logo.png" alt="DentaVita" class="logo-image img-fluid" style="max-width: 15rem" />
+      </a>
 
-    <div class="collapse navbar-collapse" id="navbarsExample03">
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">Disabled</a>
-        </li>
+      <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+        <li class="nav-item" *ngFor="let link of links"><a href="{{link.url}}" class="nav-link text-white"
+            aria-current="page">{{link.label}}</a></li>
       </ul>
     </div>
   </div>
-</nav>
+</div>

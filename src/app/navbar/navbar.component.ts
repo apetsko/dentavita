@@ -7,15 +7,25 @@ import { MenuItem } from 'primeng/api';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  items: MenuItem[] = [];
+  links: MenuItem[] = [];
+  activeItem: string = 'Главная';
 
   ngOnInit() {
-    this.items = [
-      { label: 'Home', icon: 'pi pi-fw pi-home' },
-      { label: 'Calendar', icon: 'pi pi-fw pi-calendar' },
-      { label: 'Edit', icon: 'pi pi-fw pi-pencil' },
-      { label: 'Documentation', icon: 'pi pi-fw pi-file' },
-      { label: 'Settings', icon: 'pi pi-fw pi-cog' },
+    this.links = [
+      { label: 'Главная', icon: 'pi pi-fw pi-home', url: '/' },
+      { label: 'Наша команда', icon: 'pi pi-fw pi-calendar', url: '/team' },
+      { label: 'Оформить рассрочку', icon: 'pi pi-fw pi-pencil', url: '/installment' },
+      { label: 'Контакты', icon: 'pi pi-fw pi-file', url: '/contact' },
+      { label: 'Акции', icon: 'pi pi-fw pi-cog', url: '/promo' },
     ];
   }
+
+  setActive(link: MenuItem): void {
+    this.activeItem = link.label!;
+  }
+
+  isActive(link: MenuItem): boolean {
+    return link.label === this.activeItem
+  }
 }
+
