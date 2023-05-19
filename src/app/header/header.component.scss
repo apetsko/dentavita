@@ -61,11 +61,11 @@
   SITE HEADER              
 -----------------------------------------*/
 .hero-section {
-    background-image: url('../../assets/header.jpg'), linear-gradient(#348CD2, #FFFFFF);
-    background-repeat: no-repeat;
-    background-size: 108% 76%;
-    background-position: top;
-    padding-top: 350px;
+  background-image: url('../../assets/header.jpg'), linear-gradient(#348CD2, #FFFFFF);
+  background-repeat: no-repeat;
+  background-size: 108% 100%;
+  background-position: top;
+  padding-top: 15rem;
 
 }
 
@@ -74,15 +74,17 @@
 // }
 
 .element-underneath {
-    /* Дополнительные стили */
-    z-index: 1;
-    /* Задайте значение z-index, меньшее, чем у элемента, который должен быть поверх */
+  /* Дополнительные стили */
+  z-index: 1;
+  /* Задайте значение z-index, меньшее, чем у элемента, который должен быть поверх */
 }
 
 .element-on-top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    /* Задайте значение z-index, которое позволит элементу быть поверх другого */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 2;
+  /* Задайте значение z-index, которое позволит элементу быть поверх другого */
 }

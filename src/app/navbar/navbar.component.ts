@@ -13,10 +13,10 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     this.links = [
       { label: 'Главная', icon: 'pi pi-fw pi-home', url: '/' },
-      { label: 'Наша команда', icon: 'pi pi-fw pi-calendar', url: '/team' },
-      { label: 'Оформить рассрочку', icon: 'pi pi-fw pi-pencil', url: '/installment' },
-      { label: 'Контакты', icon: 'pi pi-fw pi-file', url: '/contact' },
       { label: 'Акции', icon: 'pi pi-fw pi-cog', url: '/promo' },
+      { label: 'Наша команда', icon: 'pi pi-fw pi-calendar', url: '/team' },
+      { label: 'Контакты', icon: 'pi pi-fw pi-file', url: '/contact' },
+      { label: 'Оформить рассрочку', icon: 'pi pi-fw pi-pencil', url: '/installment' },
     ];
   }
 

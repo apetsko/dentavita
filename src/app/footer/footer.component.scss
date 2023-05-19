@@ -2,23 +2,54 @@
   SITE FOOTER              
 -----------------------------------------*/
 .site-footer {
-    background-image: url('../../assets/footer.jpg'), linear-gradient(#FFFFFF, #348CD2);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
+  background-image: url('../../assets/footer.jpg'), linear-gradient(#FFFFFF, #348CD2);
+  background-repeat: no-repeat;
+  background-size: 108% 150%;
+  background-position: bottom;
 
 
-    padding-bottom: 250px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    // background-color: #f5f5f5;
+  padding-bottom: 350px;
 
-    background-repeat: no-repeat;
-    background-size: 108% 76%;
+  bottom: 0;
+  width: 100%;
+  // background-color: #f5f5f5;
+
+  background-repeat: no-repeat;
+  background-size: 108% 76%;
 
 
 
+}
+
+
+
+.hero-section {
+  background-image: url('../../assets/header.jpg'), linear-gradient(#348CD2, #FFFFFF);
+  background-repeat: no-repeat;
+  background-size: 108% 150%;
+  background-position: top;
+  padding-top: 350px;
+
+}
+
+// .site-header h2 {
+//     color: var(--white-color);
+// }
+
+.element-underneath {
+  /* Дополнительные стили */
+  z-index: 1;
+  /* Задайте значение z-index, меньшее, чем у элемента, который должен быть поверх */
+}
+
+.element-on-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 2;
+  /* Задайте значение z-index, которое позволит элементу быть поверх другого */
 }
 
 // .site-footer>.container {
