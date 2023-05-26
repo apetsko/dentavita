@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     this.links = [
-      { label: 'Главная', icon: 'pi pi-fw pi-home', url: '/' },
+      // { label: 'Главная', icon: 'pi pi-fw pi-home', url: '/' },
       { label: 'Акции', icon: 'pi pi-fw pi-cog', url: '/promo' },
       { label: 'Оформить рассрочку', icon: 'pi pi-fw pi-pencil', url: '/installment' },
       { label: 'Наши партнёры', icon: 'pi pi-fw pi-pencil', url: '/partners' },
