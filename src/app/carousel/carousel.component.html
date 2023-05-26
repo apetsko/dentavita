@@ -1,22 +1,30 @@
-<div class="card">
-  <p-carousel [value]="products" [numVisible]="5" [numScroll]="1" [circular]="true"
-    [responsiveOptions]="responsiveOptions" autoPlayInterval="3">
-    <ng-template let-product pTemplate="item">
-      <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
-        <div class="mb-3">
-          <img src="./assets/{{ product.image }}" [alt]="product.name" class="w-6 shadow-2" />
-        </div>
-        <div>
-          <h4 class="mb-1">{{ product.name }}</h4>
-          <h6 class="mt-0 mb-3">{{ product.description }}</h6>
-          <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)!"></p-tag>
-          <div class="car-buttons mt-5">
-            <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
-            <p-button type="button" styleClass="p-button-success p-button-rounded mr-2"
-              icon="pi pi-star-fill"></p-button>
-          </div>
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+
+    <div class="carousel-item active " *ngFor="let item of carousel">
+      <img src="./assets/{{item.img}}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <div class="col-md-6 col-sm-6 text" style="color:#333333">
+          <h3 style="color:#5fb2d2">{{item.label}}</h3>
+          <h6>{{item.text}}</h6>
+          <h6><a href="{{item.url}}" class="nav-link" aria-current="page"><b>{{item.urltext}}</b></a>
+          </h6>
         </div>
       </div>
-    </ng-template>
-  </p-carousel>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>

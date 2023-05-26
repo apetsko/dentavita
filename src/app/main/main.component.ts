@@ -1,24 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Product, carouselItem } from '../app.module';
+import { Product } from '../app.module';
 
 @Component({
-  selector: 'app-carousel',
-  templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.scss'],
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.scss']
 })
-export class CarouselComponent implements OnInit {
+export class MainComponent implements OnInit {
   products: Product[] = [];
-  carousel: carouselItem[] = [];
-
-  responsiveOptions: any[] = [];
-
-  // constructor(private productService: ProductService) {}
 
   ngOnInit() {
-    // this.productService.getProductsSmall().then((products) => {
-    //   this.products = products;
-    // });
-
     this.products = [
       {
         id: '1000',
@@ -71,62 +62,7 @@ export class CarouselComponent implements OnInit {
         inventoryStatus: 'INSTOCK',
         rating: 5,
       },
-      {
-        id: '1000',
-        code: 'f230fh0g3',
-        name: 'SEVENZIRCON',
-        links: [
-          {label:'Блоки для системы Cad/Cam',url:'products/sevenzircon/blocks/cadcam'},
-          {label:'Цирконевые блоки',url:'products/sevenzircon/blocks/zircon'},
-          {label:'PMMA (пластмасса)',url:'products/sevenzircon/blocks/plastic'},
-          {label:'Восковые блоки',url:'products/sevenzircon/blocks/wax'},
-        ],
-        image: '1.jpg',
-        price: 65,
-        category: 'Accessories',
-        quantity: 24,
-        inventoryStatus: 'INSTOCK',
-        rating: 5,
-      },      
-    ];
-
-    this.carousel = [
-      {img: '1.jpg',
-      label: 'ZOTION',
-      text: 'оборудование для профессионалов',
-      urltext: 'Подробнее',
-      url: 'products/zotion/',
-      },
-      {img: '2.jpg',
-      label: 'SEVENZIRCON',
-      text: 'Зуботехнические блоки',
-      urltext: 'Подробнее',
-      url: 'products/sevenzircon/',
-      },
-      {img: '3.jpg',
-      label: 'Dental',
-      text: 'Стоматологические оборудование и материалы',
-      urltext: 'Подробнее',
-      url: 'products/Dental/',
-      },
-    ]
-
-    this.responsiveOptions = [
-      {
-        breakpoint: '1199px',
-        numVisible: 1,
-        numScroll: 1,
-      },
-      {
-        breakpoint: '991px',
-        numVisible: 2,
-        numScroll: 1,
-      },
-      {
-        breakpoint: '767px',
-        numVisible: 1,
-        numScroll: 1,
-      },
+      
     ];
   }
 
@@ -143,5 +79,3 @@ export class CarouselComponent implements OnInit {
     }
   }
 }
-
-

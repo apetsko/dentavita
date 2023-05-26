@@ -12,9 +12,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselComponent } from './carousel/carousel.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, CarouselComponent, FooterComponent, HeaderComponent],
+  declarations: [AppComponent, NavbarComponent, CarouselComponent, FooterComponent, HeaderComponent, MainComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -35,7 +36,7 @@ export interface Product {
   id: string;
   code: string;
   name: string;
-  description: string;
+  links: Link[];
   image: string;
   price: number;
   category: string;
@@ -47,5 +48,13 @@ export interface Product {
 export interface Link {
   label?: string,
   icon?: string,
+  url?: string
+}
+
+export interface carouselItem {
+  img?: string,
+  label?: string,
+  text?: string,
+  urltext?: string
   url?: string
 }
